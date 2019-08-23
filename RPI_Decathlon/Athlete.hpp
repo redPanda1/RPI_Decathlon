@@ -62,7 +62,7 @@ public:
     void set_score_for_event(string event, string result);
     double get_score_for_event(string event);
     int get_points_for_event(string event);
-    int get_points_for_area(bool isTrack);
+    int get_avg_points_for_area(bool isTrack);
     
     
 };

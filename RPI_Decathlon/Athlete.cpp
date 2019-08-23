@@ -256,13 +256,23 @@ int Athlete::get_points_for_event(string event) {
     }
 }
 
-int Athlete::get_points_for_area(bool isTrack) {
+int Athlete::get_avg_points_for_area(bool isTrack) {
     int area_points = 0;
+    int area_events = 0;
     if (isTrack) {
         area_points += event_100m.event::points;
         area_points += event_400m.event::points;
         area_points += event_1500m.event::points;
         area_points += event_110mH.event::points;
+        if (event_100m.event::points > 0) {
+            area_events += 1;
+        } else if (event_400m.event::points > 0) {
+            area_events += 1;
+        } else if (event_1500m.event::points > 0) {
+            area_events += 1;
+        } else if (event_110mH.event::points > 0) {
+            area_events += 1;
+        }
     } else {
         area_points += event_LJ.event::points;
         area_points += event_SP.event::points;
@@ -270,9 +280,27 @@ int Athlete::get_points_for_area(bool isTrack) {
         area_points += event_DT.event::points;
         area_points += event_PV.event::points;
         area_points += event_JT.event::points;
+        if (event_LJ.event::points > 0) {
+            area_events += 1;
+        } else if (event_SP.event::points > 0) {
+            area_events += 1;
+        } else if (event_HJ.event::points > 0) {
+            area_events += 1;
+        } else if (event_DT.event::points > 0) {
+            area_events += 1;
+        } else if (event_PV.event::points > 0) {
+            area_events += 1;
+        } else if (event_JT.event::points > 0) {
+            area_events += 1;
+        }
     }
     
-    return area_points;
+    if (area_events > 0) {
+        return area_points / area_events;
+    } else {
+        return 0;
+    }
+
 }
 
 
