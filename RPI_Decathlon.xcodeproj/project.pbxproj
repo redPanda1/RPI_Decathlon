@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37FFE909230FFEAB00353FDC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37FFE908230FFEAB00353FDC /* main.cpp */; };
+		37FFE913230FFF6700353FDC /* Athlete.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37FFE911230FFF6700353FDC /* Athlete.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		37FFE905230FFEAB00353FDC /* RPI_Decathlon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RPI_Decathlon; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FFE908230FFEAB00353FDC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		37FFE911230FFF6700353FDC /* Athlete.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Athlete.cpp; sourceTree = "<group>"; };
+		37FFE912230FFF6700353FDC /* Athlete.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Athlete.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				37FFE908230FFEAB00353FDC /* main.cpp */,
+				37FFE911230FFF6700353FDC /* Athlete.cpp */,
+				37FFE912230FFF6700353FDC /* Athlete.hpp */,
 			);
 			path = RPI_Decathlon;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FFE909230FFEAB00353FDC /* main.cpp in Sources */,
+				37FFE913230FFF6700353FDC /* Athlete.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
